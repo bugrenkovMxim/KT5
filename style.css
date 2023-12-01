@@ -1,0 +1,68 @@
+body {
+    overflow:hidden;
+  }
+
+.car{
+    margin: 0 auto;
+    position: absolute;
+    width: 200px;
+    animation: moving 10s linear -2s infinite;
+  }
+  .car:before {
+    content:"";
+    display:block;
+    animation: carmove 3.1s infinite linear;
+    background: url('https://i.stack.imgur.com/xWNOG.png') center/cover;
+    padding-top:45.25%;
+  }
+  
+  .weel{
+    animation: wheel 10s infinite -2s linear;
+    background: url('https://i.stack.imgur.com/0Osjx.png') center/cover;
+    position: absolute;
+    bottom:0.8%;
+    width: 14.15%;
+  }
+  .weel:before {
+     content:"";
+     display:block;
+     padding-top:100%;
+  }
+  .weelleft{left: 14.5%;}
+  .weelright{right: 10%;}
+  
+ 
+/* анимация колёс */
+  @keyframes wheel{
+   0%{
+     transform: rotate(0deg)
+    }
+    35% {
+      transform: rotate(950deg)
+    }
+    50% {
+      transform: rotate(950deg)
+    }
+   100%{
+     transform: rotate(-1500deg)
+    }
+  }
+
+  /* анимация передвижения машины */
+  @keyframes moving {
+    0% {
+      right: 300em;
+      animation-timing-function: ease-out;
+    }
+    35% {
+      right: 0;
+    }
+    50% {
+      right: 50px;
+      animation-timing-function: ease-in;
+    }
+    100% {
+      right: 120%;
+    }
+  }
+  
